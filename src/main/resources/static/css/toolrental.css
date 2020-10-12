@@ -1,0 +1,278 @@
+body {
+    font-family: helvetica, Nimbus Sans L, Arial;
+    margin: 0;
+}
+
+
+/* styles for header, main content and containers */
+.page-header, .page-container {
+    width: 90%;
+    margin: auto;
+    min-width: 720px;
+    background-color: #ffe7c9;
+}
+.page-header-container {
+    background-color: #ffa547;
+}
+.page-container h3 {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/* styles for user content in page header */
+.user-container {
+    float: right;
+    display: flex;
+    margin: 5px;
+}
+.user-data {
+    display: inline-block;
+    margin: auto 15px;
+    text-align: right;
+}
+.user-headshot {
+    float: right;
+    height: 56px;
+    border-radius: 50%;
+}
+.user-title {
+    color: #777;
+    font-size: .85em;
+}
+
+
+/* styles for main content and product sections */
+.product-block, .agreement-block {
+    width: 660px;
+    margin: auto;
+}
+
+.order-wrapper {
+    display: inline-block;
+    width: 450px;
+    border: 1px solid #000;
+    margin: auto;
+}
+
+.order-form input, .order-form select {
+    width: 100%;
+    max-width: 420px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.2em;
+    /* ensure all same width */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.order-entry {
+    padding: 20px;
+    background-color: #ffc77c;
+}
+
+.order-form div {
+    margin-top: 15px;
+}
+
+.button-div {
+    text-align: center;
+    background-color: #ffa950;
+    padding: 15px;
+    border-top: 1px solid #111;
+}
+
+.button-checkout {
+    padding: 5px 25px;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.button-checkout:hover {
+    cursor: pointer;
+    background-color: #2391ff;
+    color: white;
+}
+
+.tool-wrapper {
+    background-color: #EEE;
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    border: 1px solid;
+    padding: 10px;
+    border-left: none;
+    height: 275px;
+    position: relative;
+}
+
+.tool-detail, .tool-detail-new {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0; /* height: 100%; display: none; */
+}
+.tool-detail-new {
+    background-color: lightblue!important;
+    z-index: 10;
+}
+
+.item-note {
+    font-style: italic;
+    color: #888;
+    font-size: .85em;
+}
+
+.field-error {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: red;
+    padding: 5px 10px;
+    color: #FFF;
+}
+
+
+/* agreement page detail styles */
+.agreement-block {
+    display: none;
+    margin-top: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    min-height: 500px;
+    box-shadow: 0 8px 27px -6px #999;
+}
+.text-success, .text-thanks {
+    font-weight: bold;
+    color: green;
+}
+.rental-detail {
+    margin-left: 20px;
+}
+
+
+/* styles for Loader animation - spinner type */
+.sp-small {
+	width: 32px;
+	height: 32px;
+	clear: both;
+	margin: 20px auto;
+}
+.sp-large {
+    width: 64px;
+    height: 64px;
+    clear: both;
+    margin: 20px auto;
+}
+
+.spinner {
+	pointer-events: none;
+	border: 0.2em solid #eee;
+	border-top-color: #00a7b5;
+	border-bottom-color: lightblue;
+	border-radius: 50%;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg) }
+}
+@keyframes spin {
+	100% { transform: rotate(360deg) }
+}
+
+
+/* Various styles for the overlays and elements within */
+.overlay-mask {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4); /* black with opacity */
+}
+.overlay {
+    display: none;
+    position: relative;
+    background-color: #F1BF4C;
+    margin: 140px auto;
+    padding: 0;
+    border: 1px solid #888;
+    max-width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+}
+.overlay-title {
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    height: 41px;
+}
+.overlay-title h2 {
+    background-color: #FFF;
+    padding: 8px 0 4px 0;
+    margin: 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+.overlay-content {
+    padding: 19px;
+    background-color: #FEFEFE;
+    border-radius: 10px;
+    border: 4px solid #C7972D;
+}
+
+.button-row {
+    text-align: center;
+    margin-top: 10px;
+}
+.button-cancel, .button-ok {
+    display: inline-block;
+    padding: 10px;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.button-cancel {
+    background-color: #777;
+}
+.button-cancel:hover {
+    background-color: #CCC;
+}
+.button-ok {
+    background-color: #056e05;
+}
+.button-ok:hover {
+    background-color: #11a911;
+}
+
+
+/* animation for overlay - zoom popup style */
+.overlay {
+  -webkit-animation: zoom 0.5s;
+  animation: zoom 0.5s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+/* start media query styles for smaller screens */
+@media screen and (max-width: 1024px) {
+    .page-header, .page-container {
+        width: 100%;
+    }
+}

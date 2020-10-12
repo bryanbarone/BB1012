@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Tool Rental Demo - Bryan Barone</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/toolrental.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/toolrental.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-32x32.png">
+</head>
+<body>
+    <div class="page-header-container">
+        <div class="page-header">
+            <img src="image/home-logo.png" style="height: 65px; margin: 5px;" />
+            <div class="user-container">
+                <div class="user-data">
+                    <span id="username">Bryan Barone</span>
+                    <br/><span class="user-title">&#9734;5 star customer&#9734;</span>
+                    <br/><a href="javascript:viewProfileOverlay()">View profile</a>
+                </div>
+                <img id="userheadshot" class="user-headshot" src="image/profile-headshot.png" />
+            </div>
+            <!-- page title -->
+        </div> <!-- end header div -->
+    </div>
+    <div class="page-container" style="background-color: #FFF;"><h3>Tool Rental Demo Assignment</h3></div>
+
+    <div id="rentalScreen" class="product-block">
+        <div class="order-wrapper">
+            <div class="order-entry">
+                <form id="orderForm" class="order-form">
+
+                    <div>Select tool:</div>
+                    <select id="toolSelector" onchange="tr_selectTool()">
+                        <option value="">Select a tool to rent...</option>
+                    </select>
+                    <div>Checkout date (MM/DD/YY):</div>
+                    <input id="checkoutDate" type="text" placeholder="Enter date MM/DD/YY" maxlength="8">
+                    <div>Number of rental days:</div>
+                    <input id="rentalDays" type="text" placeholder="Enter number" maxlength="4">
+                    <div>Discount percent: (0-100):</div>
+                    <input id="discount" type="text" placeholder="Enter number (0-100)" maxlength="3">
+                </form>
+            </div>
+            <div class="button-div">
+                <button class="button-checkout" onclick="tr_submitCheckout()">Book It</button>
+            </div>
+        <!-- keep elements tight -->
+        </div><div class="tool-wrapper">
+            <div class="tool-detail"></div>
+            <b>Welcome</b> to The Home Cheapo's barely-new tool rental system!
+            <p>To get started, use the drop down to select a tool you would like to rent. Item details and
+               rental terms will be displayed here. Next fill in the remaining fields regarding the checkout
+               period and book it! Payment will be made on pickup.
+            </p>
+        </div>
+    </div>
+
+    <div id="agreementScreen" class="agreement-block">
+        <div style="padding: 10px;">
+            <h2 style="margin: auto auto; text-align: center;">Your Rental Agreement</h2>
+            <p><span class="text-success">Thank you so much for your order!</span>
+               <br/>Please review your rental details below and contact your local pickup store if you have any questions or issues.</p>
+            <img id="agreementImage" src="" style="float: right; margin: 10px;" />
+            <table class="rental-detail">
+                <tr><td style="min-width: 160px">Checkout date:</td><td id="agrCheckoutDate"></td></tr>
+                <tr><td>Due date:</td><td id="agrDueDate"></td></tr>
+
+                <tr><td>Tool code:</td><td id="agrToolCode"></td></tr>
+                <tr><td>Tool type:</td><td id="agrToolType"></td></tr>
+                <tr><td>Tool brand:</td><td id="agrToolBrand"></td></tr>
+                <tr><td>Rental days:</td><td id="agrRentalDays"></td></tr>
+
+                <tr><td>Daily charge:</td><td id="agrDailyCharge"></td></tr>
+                <tr><td>Charge days:</td><td id="agrChargeDays"></td></tr>
+                <tr><td>Sub total:</td><td id="agrSubTotal"></td></tr>
+                <tr><td>Discount percent:</td><td id="agrDiscountPercent"></td></tr>
+                <tr><td>Discount amount:</td><td id="agrDiscountAmount"></td></tr>
+                <tr><td>Final charge:</td><td id="agrFinalCharge"></td></tr>
+            </table>
+            <br/>
+            <p><a href="javascript: resetRentalForm()">New rental</a></p>
+        </div>
+    </div>
+
+
+    <!-- popup container / mask and overlays - quick and dirty (limited time/just for extra fun) -->
+    <div id="overlaycontainer" class="overlay-mask">
+        <!-- profile overlay -->
+        <div id="overlay-profile" class="overlay">
+            <div class="overlay-title"><h2><strike style="color: #888;">User</strike> Candidate profile</h2></div>
+            <div class="overlay-content">
+                <img class="user-headshot" src="image/profile-headshot.png" style="height: 75px; margin: 15px 0px 0px 15px;" />
+                <p>
+                    <span class="text-thanks">Thank you</span> for this opportunity and consideration to join
+                    the exciting adventures of the growing Cardinal family! I look forward to our next meeting and
+                    hope you enjoyed the Tool Rental demo.<br/>
+                </p>
+
+                <p>Feel free to visit these sites for additional details and information:</p>
+                <div style="padding: 5px 0 10px 20px;">
+                    LinkedIn profile:<br/>
+                    <a href="https://www.linkedin.com/in/bryanbarone/" target="_blank">www.linkedin.com/in/bryanbarone</a>
+                    <br/><br/>
+                    Acclaim digital badges:<br/>
+                    <a href="https://www.youracclaim.com/users/bryan-barone" target="_blank">www.youracclaim.com/users/bryan-barone</a>
+                    <br/><br/>
+                    Just for fun:<br/>
+                    <a href="http://www.bryanbarone.com" target="_blank">www.bryanbarone.com</a>
+                </div>
+
+                <div class="button-row">
+                    <button class="button-checkout" onclick="closeOverlay()">Close</button>
+                </div>
+                <!-- <div class="button-row"><a href="javascript: closeOverlay()" class="button-ok">CLOSE</a></div> -->
+            </div>
+        </div>
+
+    </div>
+    <!-- end popup container -->
+
+</body>
+</html>

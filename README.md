@@ -29,9 +29,11 @@ Successful run of Unit Tests is shown
 ![Run unit tests](https://raw.githubusercontent.com/bryanbarone/ReadmeImages/main/RunUnitTests.png)
 
 ## Run the application
-Use Run 'ToolRentalAppl...main()' to start the application and automatically setup an application configuration.
+From the ToolRentalApplication class file, select the option Run 'ToolRentalAppl...main()' to start the application which will also automatically setup an application configuration for future starts.
 
-Once started, use your favorite browser to open the url:
+![Server config](https://raw.githubusercontent.com/bryanbarone/ReadmeImages/main/Server.png)
+
+Once the server has started, use your favorite browser to open the following url:
 
 http://localhost:8080
 

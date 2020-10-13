@@ -15,7 +15,7 @@ Select 'Get from Version Control'
 
 Clone the public repository at:
 
-`https://github.com/bryanbarone/ToolRental.git`
+`https://github.com/bryanbarone/BB1012.git`
 
 Wait for resolution of dependencies and downloading of plugins
 

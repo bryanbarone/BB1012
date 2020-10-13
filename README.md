@@ -33,7 +33,7 @@ From the ToolRentalApplication class file, select the option Run 'ToolRentalAppl
 
 ![Server config](https://raw.githubusercontent.com/bryanbarone/ReadmeImages/main/Server.png)
 
-Once the server has started, use your favorite browser to open the following url:
+Once the server has started, use your favorite browser to access the application from the following url:
 
 http://localhost:8080
 

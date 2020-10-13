@@ -20,16 +20,16 @@ Clone the public repository at:
 Wait for resolution of dependencies and downloading of plugins
 
 ## Unit Tests
-To run Unit Test Suite, from test root select 'Run all Tests' (Ctrl+Shift+F10)
+To run Unit Test Suite, from the test root directory select 'Run all Tests' (Ctrl+Shift+F10)
 
 ![Project structure](https://raw.githubusercontent.com/bryanbarone/ReadmeImages/main/ProjectStructure.png)
 
-Successful run of Unit Tests is shown
+The following shows a successful run of Unit Tests
 
 ![Run unit tests](https://raw.githubusercontent.com/bryanbarone/ReadmeImages/main/RunUnitTests.png)
 
 ## Run the application
-From the ToolRentalApplication class file, select the option Run 'ToolRentalAppl...main()' to start the application which will also automatically setup an application configuration for future starts.
+From the ToolRentalApplication class file, select the option Run 'ToolRentalAppl...main()' to start the application. This will also automatically setup an application configuration for future use.
 
 ![Server config](https://raw.githubusercontent.com/bryanbarone/ReadmeImages/main/Server.png)
 

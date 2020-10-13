@@ -37,6 +37,10 @@ Once the server has started, use your favorite browser to access the application
 
 http://localhost:8080
 
+The h2 database can also be viewed at:
+http://localhost:8080/h2-console/
+
+
 Enjoy! :cowboy_hat_face:
 
 
